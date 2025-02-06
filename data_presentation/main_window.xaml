@@ -1,0 +1,44 @@
+<Window 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="LogStack"
+    Height="400"
+    Width="600"
+>
+    <StackPanel>
+		<Menu>
+            <MenuItem Header="_Application">
+                <MenuItem Name="Configuration" Header="_Configuration" />
+                <Separator />
+                <MenuItem Name="Exit" Header="_Exit" />
+            </MenuItem>
+			<MenuItem Header="_Time Range">
+                <MenuItem Name="Last24Hours" Header="_Last 24 Hours" IsCheckable="True" IsChecked="False" />
+                <MenuItem Name="Last7Days" Header="_Last 7 Days" IsCheckable="True" IsChecked="False" />
+                <MenuItem Name="Last2Weeks" Header="_Last 2 Weeks" IsCheckable="True" IsChecked="True" />
+                <MenuItem Name="Last1Month" Header="_Last 1 Month" IsCheckable="True" IsChecked="False" />
+            </MenuItem>
+            <MenuItem Header="_Event Category">
+                <MenuItem Name="UserAccountManagement" IsCheckable="True" IsChecked="False" Header="_User Account Management" />
+                <MenuItem Name="UserGroupCreationDeletion" IsCheckable="True" IsChecked="False" Header="_User Group Creation/Deletion" />
+                <MenuItem Name="UserGroupChanges" IsCheckable="True" IsChecked="False" Header="_User Group Membership Changes" />
+                <MenuItem Name="Placeholder1" IsCheckable="True" IsChecked="False" Header="_Placeholder1" />
+                <MenuItem Name="Placeholder2" IsCheckable="True" IsChecked="False" Header="_Placeholder2" />
+                <MenuItem Name="Placeholder3" IsCheckable="True" IsChecked="False" Header="_Placeholder3" />
+                <MenuItem Name="Placeholder4" IsCheckable="True" IsChecked="False" Header="_Placeholder4" />
+            </MenuItem>
+		</Menu>
+        <DataGrid 
+            Name="TestDataGrid" 
+            AutoGenerateColumns="True"
+            CanUserSortColumns="True"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            CanUserResizeRows="True"
+            IsReadOnly="True"
+        />
+    </StackPanel>
+</Window>
+<!--License: https://github.com/jonathan8155/LogStack/blob/master/LICENSE -->
