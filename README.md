@@ -232,6 +232,11 @@ Each type of event (Each eventid) has its own table within the database.  The dr
 
 ## Data Security
 
+Information security focuses on balancing on three core aspects: 
+- **confidentiality** This involves protecting the information from unauthorized access.
+- **integrity** This involves protecting the information from unauthorized or unintentional change (modification or deletion).
+- **availability.** This involves ensuring the data is available to authorized users whenever it is needed.
+
 ## Dependancies
 
 ## Development Tools
