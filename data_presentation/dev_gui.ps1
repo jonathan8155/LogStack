@@ -25,10 +25,21 @@ function LoadData {
     )
     
 }
+
+function UpdateScreen {
+    param (
+        [Parameter(Mandatory=$true)][array]$Data
+    )
+    $DataGrid = $MainWindow.FindName("TestDataGrid")
+    $DataGrid.ItemsSource = $Data
+
+    
+}
 #endregion
 
 # Load and Parse xaml
-[xml]$xaml = Get-Content -Path .\main_window.xaml -Raw
+$Path = "C:\Users\jonp3\projects\LogStack\data_presentation\main_window.xaml"
+[xml]$xaml = Get-Content -Path $Path -Raw
 $reader = [System.Xml.XmlNodeReader]::new($xaml)
 
 # Create main window
